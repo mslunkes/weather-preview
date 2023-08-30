@@ -1,0 +1,147 @@
+:root {
+    --background-color: #0d0225;
+    --color-text: #FFF;
+    --color-primary: #248CFF;
+    --color-secondary: #222;
+    --input-background: #444;
+    --opacity-primary: #248CFF44;
+}
+
+.light-theme {
+    --background-color: #CCC;
+    --color-text: #000;
+    --color-primary: #EFEA34;
+    --color-secondary: #FFF;
+    --input-background: #EEE;
+    --opacity-primary: #EFEA3444;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: .5em;
+    color: var(--color-text);
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.header-infos {
+    width: 98%;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-secondary);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.weather-info {}
+
+.items {
+    display: flex;
+    width: 380px;
+    justify-content: space-around;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-secondary);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.items p {
+    text-transform: capitalize;
+}
+
+
+
+#city {
+    width: 60%;
+    height: 35px;
+    border-radius: 4px;
+    padding-left: 10px;
+    background-color: var(--input-background);
+    color: var(--color-text);
+    border: none;
+}
+
+#search-button {
+    height: 40px;
+    width: 60px;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-text)
+}
+
+#search-button:hover {
+    opacity: .9;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    --background: #28096b;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    -webkit-transition: .5s;
+    transition: .5s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    -webkit-box-shadow: inset 8px -4px 0px 0px #fff000;
+    box-shadow: inset 8px -4px 0px 0px #fff000;
+    background: var(--background);
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+input:checked+.slider {
+    background-color: #522ba7;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-box-shadow: inset 15px -4px 0px 15px #fff000;
+    box-shadow: inset 15px -4px 0px 15px #fff000;
+}

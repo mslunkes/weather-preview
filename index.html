@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <script src="https://kit.fontawesome.com/a146bb1a98.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="imagem/png" href="./images/cloud-solid.svg">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1> Veja o Tempo na sua Cidade</h1>
+            
+        <div class="header-infos">
+            <form id="weather-form">
+                <input type="text" name="city" id="city" placeholder="Nome da cidade" required>
+                
+                <button type="submit" id="search-button">Buscar</button>
+            </form>
+            
+            <!-- https://uiverse.io/ -->
+            <label class="switch">
+                <input id="checkbox1" type="checkbox" >
+                <span class="slider"></span>
+            </label>
+        </div>
+        
+        <div id="weather-info"></div>
+        
+    </div>
+
+    <script src="index.js"></script>
+    <script src="mode-theme.js"></script>
+</body>
+</html>
